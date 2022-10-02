@@ -1,0 +1,5 @@
+package com.user.entity.controller;
+
+public class UserController {
+
+}

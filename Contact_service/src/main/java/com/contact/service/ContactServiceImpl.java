@@ -1,0 +1,29 @@
+package com.contact.service;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.stereotype.Service;
+
+import com.contact.entity.Contact;
+@Service
+public class ContactServiceImpl implements ContactService {
+
+	//fake list of contacts
+	
+	List<Contact>list=List.of(
+			new Contact(1L,"abc@gmail.com","Amit",1311L),
+			new Contact(2L,"def@gmail.com","sumit",1311L),
+			new Contact(3L,"ghi@gmail.com","Namit",1312L),
+			new Contact(4L,"jkl@gmail.com","Amrit",1313L)
+			);
+	
+	
+	@Override
+	public List<Contact> getContactOfUser(Long UserId) {
+		// TODO Auto-generated method stub
+		return list.stream().filter(contact->contact.getUserId().equals(UserId)).collect(Collectors.toList());
+	}
+	
+
+}

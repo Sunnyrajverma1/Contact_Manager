@@ -1,0 +1,10 @@
+package com.user.service;
+
+import org.springframework.stereotype.Controller;
+
+import com.user.entity.User;
+@Controller
+public interface UserService {
+	public User getUser(long id);
+
+}

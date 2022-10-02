@@ -1,0 +1,9 @@
+user-service
+	portid=9001
+	
+	/user/1334
+contact_service
+	portid=9002
+
+Apigateway
+	portid=8999
